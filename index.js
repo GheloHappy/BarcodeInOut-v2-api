@@ -101,4 +101,4 @@ app.get('/api/v2/getIssueByDate/:date', (req, res) => {
 });
 
 
-app.listen(port, () => console.log(`Server started on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
