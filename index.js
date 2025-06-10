@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
 const sql = require('mssql');
+const { user, password, server, database, PORT } = require('./constants');
 
 const config = {
-    user: 'sa',
-    password: 'Passw0rd',
-    server: '192.168.1.248',
-    database: 'MLDIAPP',
+    user: user,
+    password: password,
+    server: server,
+    database: database,
     cryptoCredentialsDetails: {
         minVersion: 'TLSv1'
     },
@@ -99,5 +100,5 @@ app.get('/api/v2/getIssueByDate/:date', (req, res) => {
     });
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Server started on port ${port}`));
+
+app.listen(port, () => console.log(`Server started on port ${PORT}`));
