@@ -30,7 +30,7 @@ app.get('/api/v1/getDtSummary', (req, res) => {
     });
 });
 
-app.get('/api/v1/getDtSummaryByDate/:date', (req, res) => {
+app.get('/api/v1/getDtSummaryByDate/:date' , (req, res) => {
     const date = req.params.date;
     sql.connect(config, err => {
         if (err) console.log(err);
